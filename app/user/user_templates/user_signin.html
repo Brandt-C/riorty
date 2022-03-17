@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+
+
+
+{% block content%}
+
+<h3>Sign in to see the cool stuff!</h3>
+<form method="POST">
+    {{ sform.hidden_tag() }}
+    <div class="form-group">
+        <fieldset id="username-field">
+            {{ sform.username.label }}
+            {{ sform.username(class='form-control', placeholder='Username. . .')}}
+        </fieldset>
+        <fieldset id="password-field">
+            {{ sform.password.label }}
+            {{ sform.password(class='form-control', placeholder='Password. . .')}}
+        </fieldset>
+        <br>
+        {{ sform.submit(class='btn btn-block btn-info') }}
+        <br>
+        <a class="nav-link" href="{{ url_for('user.register')}}">Don't have an account?  Don't be such a Morty, click here to register.</a>
+    </div>
+
+</form>
+
+{% endblock content %}

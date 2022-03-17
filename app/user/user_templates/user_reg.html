@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% block content%}
+<h1>This is the registration page!</h1>
+
+<form method="POST">
+    {{ rform.hidden_tag() }}
+    <div class="form-group">
+        <fieldset id="username-field">
+            {{ rform.username.label }}
+            {{ rform.username(class='form-control', placeholder='Username. . .')}}
+        </fieldset>
+        <fieldset id="email-field">
+            {{ rform.email.label }}
+            {{ rform.email(class='form-control', placeholder='Email. . .')}}
+        </fieldset>
+        <fieldset id="first_name-field">
+            {{ rform.first_name.label }}
+            {{ rform.first_name(class='form-control', placeholder='First Name. . .')}}
+        </fieldset>
+        <fieldset id="last_name-field">
+            {{ rform.last_name.label }}
+            {{ rform.last_name(class='form-control', placeholder='Last Name. . .')}}
+        </fieldset>
+        <fieldset id="password-field">
+            {{ rform.password.label }}
+            {{ rform.password(class='form-control', placeholder='Password. . .')}}
+        </fieldset>
+        <fieldset id="confirm_password-field">
+            {{ rform.confirm_password.label }}
+            {{ rform.confirm_password(class='form-control', placeholder='Confirm Password. . .')}}
+        </fieldset>
+        <br>
+        {{ rform.submit(class='btn btn-block btn-info') }}
+    </div>
+
+</form>
+{% endblock content %}

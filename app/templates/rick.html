@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="../static/css/rick.css">
+{% endblock css %}
+
+{% block content %}
+<h1>The many many Ricks</h1>
+<div id="rick-head" class="card mb-3">
+    <img src="{{r_m.chars[1].image}}" class="card-img-top img-fluid mw-50" alt="rick pic">
+    <div class="card-body">
+      <h5 class="card-title">{{r_m.chars[1].name}}</h5>
+      <p class="card-text">Status: {{r_m.chars[1].status}}<br>Species: {{r_m.chars[1].species}}<br>Gender: {{r_m.chars[1].gender}}</p>
+      <p class="card-text"><small class="text-muted">Origin: {{r_m.chars[1].origin}}</small></p>
+    </div>
+  </div>
+  <div class="card-group">
+    <div class="card">
+      <img src="{{r_m.chars[15].image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{r_m.chars[15].name}}</h5>
+        <p class="card-text">Status: {{r_m.chars[15].status}}<br>Species: {{r_m.chars[15].species}}<br>Gender: {{r_m.chars[15].gender}}</p>
+        <p class="card-text"><small class="text-muted">Origin: {{r_m.chars[15].origin}}</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{{r_m.chars[760].image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{r_m.chars[760].name}}</h5>
+        <p class="card-text">Status: {{r_m.chars[760].status}}<br>Species: {{r_m.chars[760].species}}<br>Gender: {{r_m.chars[760].gender}}</p>
+        <p class="card-text"><small class="text-muted">Origin: {{r_m.chars[760].origin}}</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{{r_m.chars[22].image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{r_m.chars[22].name}}</h5>
+        <p class="card-text">Status: {{r_m.chars[22].status}}<br>Species: {{r_m.chars[22].species}}<br>Gender: {{r_m.chars[22].gender}}</p>
+        <p class="card-text"><small class="text-muted">Origin: {{r_m.chars[22].origin}}</small></p>
+      </div>
+    </div>
+  </div>
+
+
+  {% endblock content %}

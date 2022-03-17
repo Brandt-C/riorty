@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+{% block css %}
+<link rel="stylesheet" href="../static/css/morty.css">
+{% endblock css %}
+
+
+{% block content%}
+
+<h1>Morty</h1>
+<div class="card-group">
+    <div class="card">
+      <img src="{{r_m.chars[43].image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{r_m.chars[43].name}}</h5>
+        <p class="card-text">Status: {{r_m.chars[43].status}}<br>Species: {r_m.chars[43].species}}<br>
+        Gender: {{r_m.chars[43].gender}}<br></p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Origin: {{r_m.chars[43].origin}}</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{{r_m.chars[61].image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{r_m.chars[61].name}}</h5>
+        <p class="card-text">Status: {{r_m.chars[61].status}}<br>Species: {{r_m.chars[61].species}}<br>
+          Gender: {{r_m.chars[61].gender}}<br></p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Origin: {{r_m.chars[61].origin}}</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{{r_m.chars[84].image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{r_m.chars[84].name}}</h5>
+        <p class="card-text">Status: {{r_m.chars[84].status}}<br>Species: {{r_m.chars[84].species}}<br>
+          Gender: {{r_m.chars[84].gender}}<br></p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Origin: {{r_m.chars[84].origin}}</small>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

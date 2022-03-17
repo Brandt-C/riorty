@@ -1,0 +1,16 @@
+h1{
+    font-weight: bolder;
+    text-align: center;
+    font-size: 350%;
+}
+
+#rick-head>img{
+    max-width: min-content;
+}
+
+.card-group{
+    max-width: 92%;
+    padding: 5px;
+    margin: 15px;
+    
+}
