@@ -42,7 +42,9 @@ def register():
             return redirect(url_for('home'))
         else:
             flash("didn't work!!!!!", category='danger')
-
             return redirect(url_for('user.register'))
-    
     return render_template('user_reg.html', rform=rform)
+
+@user.route('/ep_build', methods=['GET', 'POST'])# @login_required
+def ep_build():
+    return render_template('ep_build.html')

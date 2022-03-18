@@ -44,3 +44,6 @@ def rando():
     r_m.add_char(e)
     return render_template('rando.html', r_m = r_m, a = a, b = b, c = c, d = d, e=e)
 
+@app.route('/findchar', methods=['GET', 'POST'])
+def findchar():
+    return render_template('findchar.html')

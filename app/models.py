@@ -42,3 +42,5 @@ class Post(db.Model):
     body = db.Column(db.String(255))
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
     user_id = db.Column(db.String, db.ForeignKey('user.id'))
+
+
