@@ -1,9 +1,12 @@
 
 from app import app
-from flask import render_template
+from flask import render_template, request
 from .services import *
 from random import randrange
+from .forms import FindChar
 #from .forms import "ClassForm"
+import requests as r
+
 
 
 @app.route('/')
@@ -46,4 +49,15 @@ def rando():
 
 @app.route('/findchar', methods=['GET', 'POST'])
 def findchar():
-    return render_template('findchar.html')
+    form = FindChar()
+    if request.method == 'POST':
+        data = r.get(f'https://rickandmortyapi.com/api/character/{form.id.data}').json()
+        c = Char(
+            name =data['name'], status=data['status'],
+            species=data['species'], gender=data['gender'],
+            origin=data['origin'], image=data['image'], id=data['id']
+        )
+
+        return render_template('findchar.html', form=form, c=c)
+    else:
+        return render_template('findchar.html', form=form)

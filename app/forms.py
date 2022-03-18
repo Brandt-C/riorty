@@ -10,5 +10,5 @@ class epCreate(FlaskForm):
     # j_choice = 
     
 class FindChar(FlaskForm):
-    char = IntegerField('Choose an id to see a character', validators=[DataRequired()])
+    id = IntegerField('Choose an id to see a character', validators=[DataRequired()])
     submit = SubmitField()

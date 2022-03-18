@@ -2,6 +2,7 @@
 
 
 {% block content %}
+<h3>Find some characters by ID:</h3>
 <form>
     <div class="row mb-3">
         <label for="customRange2" class="form-label">Character by ID</label>
@@ -11,4 +12,20 @@
     </div>
     <button type="submit" class="btn btn-primary">See Character</button>
 </form>
+{% endblock %}
+{% block morecontent%}
+<div class="row-justify-content-center">
+    <div class="card-6">
+        <img src="{{c.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{c.name}}</h5>
+          <p class="card-text">Status: {{c.status}}<br>Species: {{c.species}}<br>
+            Gender: {{c.gender}}<br></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Origin: {{c.origin}}</small>
+        </div>
+      </div>
+</div>
+
 {% endblock %}
